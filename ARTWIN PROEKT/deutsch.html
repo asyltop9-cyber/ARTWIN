@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a855f7">
+<link rel="manifest" href="manifest.json">
+<title>Deutsch Master</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Deutsch Master</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Start</button>
+    <button onclick="showSection('books')">Bücher</button>
+    <button onclick="showSection('game')">Spiel</button>
+    <button onclick="showSection('test')">Test</button>
+</nav>
+
+<section id="home" class="active">
+    <div class="card">
+        <h2>Willkommen!</h2>
+        <p>Lerne Deutsch auf moderne Weise 🚀</p>
+        <p>Dein Level: <span id="level">A1</span></p>
+    </div>
+</section>
+
+<section id="books">
+    <div class="card">
+        <h2>📖 Lesen</h2>
+        <p id="bookText"></p>
+        <button onclick="speakText()">🔊 Vorlesen</button>
+        <button onclick="goBack()">Zurück</button>
+    </div>
+</section>
+
+<section id="game">
+    <div class="card">
+        <h2>🐾 Rate das Tier</h2>
+        <p id="animalQuestion"></p>
+        <input type="text" id="animalAnswer" placeholder="Antwort">
+        <button onclick="checkAnimal()">Prüfen</button>
+        <p id="animalResult"></p>
+        <button onclick="goBack()">Zurück</button>
+    </div>
+</section>
+
+<section id="test">
+    <div class="card">
+        <h2>📝 Sprachtest</h2>
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Antwort">
+        <button onclick="checkAnswer()">Prüfen</button>
+        <p id="testResult"></p>
+        <button onclick="goBack()">Zurück</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
